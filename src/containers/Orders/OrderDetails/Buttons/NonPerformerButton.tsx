@@ -207,7 +207,7 @@ const NonPerformerButton: React.FC<NonPerformerButtonProps> = ({
                 )
             }
             {
-                checkUsersStatusInOrder(EResponseStatus.IN_PROGRESS) && checkStatusOrder(EOrderStatus.IN_PROGRESS) && (
+                checkUsersStatusInOrder(EResponseStatus.IN_PROGRESS) && checkStatusOrder(EOrderStatus.IN_PROGRESS) && checkUserRole(ERole.manager) && (
                     <Button
                         style={{ ...orderDetailsButton, backgroundColor: green }}
                         type={'primary'}
