@@ -1,0 +1,33 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create env file
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Install modules
+        run: npm install --force
+
+      - name: Build project
+        run: npm run build
+
+      - name: Copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist"
+          target: "/root/esdp-team-3-frontend"

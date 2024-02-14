@@ -1,0 +1,28 @@
+.sidebar-switcher-main {
+    width: 70px;
+    height: 100vh;
+    background-color: #176ba7;
+    margin: 10px;
+    width: 54px;
+    min-width: 54px;
+    right: 0;
+    z-index: 1;
+}
+
+.sidebar-switcher {
+    width: 70px;
+    height: 100vh;
+    margin: 10px;
+    width: 54px;
+    min-width: 54px;
+    right: 0;
+    z-index: 1;
+
+    path {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
+}

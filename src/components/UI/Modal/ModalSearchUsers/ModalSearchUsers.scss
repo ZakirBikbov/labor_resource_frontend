@@ -1,0 +1,13 @@
+.my-select-container .ant-select .ant-select-selector {
+    border-radius: 6px 6px 0 0;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector,
+.ant-input {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,38 @@
+.responseTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.responseBtnGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalResponseListAcceptBtn,
+.modalResponseListDeclineBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalResponseListAcceptBtn {
+    background-color: #00FF1A;
+    transition: 'background-color 0.3s';
+    margin-right: 10px;
+}
+
+.modalResponseListAcceptBtn.css-dev-only-do-not-override-z1cjmh.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    border-color: #00FF1A;
+}
+
+.modalResponseListDeclineBtn {
+    background-color: #FF4D4F;
+    transition: 'background-color 0.3s';
+}
+
+.modalResponseListDeclineBtn.css-dev-only-do-not-override-z1cjmh.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    border-color: #FF4D4F;
+}
